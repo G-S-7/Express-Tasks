@@ -1,0 +1,29 @@
+const express = require('express')
+const app = express()
+const port = 3000
+
+const obj1 = {"id": 1, "name": "Amit", "age": 21, "course":"BCA"}
+const obj2 = {"id": 2, "name": "Priya", "age": 22, "course":"MCA"}
+const obj3 = {"id": 3, "name": "Ravi", "age": 20, "course":"B.Tech"}
+const obj4 = {"id": 4, "name": "Sonal", "age": 23, "course":"MBA"}
+const obj5 = {"id": 5, "name": "Sheena", "age": 21, "course":"BCA"}
+const obj6 = {"id": 6, "name": "Kriti", "age": 22, "course":" MCA"}
+const obj7 = {"id": 7, "name": "Ram", "age": 23, "course":"B.Tech"}
+const obj8 = {"id": 8, "name": "Naresh", "age": 23, "course":"BCA"}
+const obj9 = {"id": 9, "name": "Giya", "age": 21, "course":"MBA"}
+const obj10 = {"id": 10, "name": "Hari", "age": 23, "course":"MCA"}
+
+let arr =[obj1, obj2, obj3, obj4, obj5, obj6, obj7, obj8, obj9, obj10]
+
+app.get('/', (req, res) => {
+  res.send(arr)
+})
+
+app.listen(port, () => {
+  console.log(`Example app listening on port ${port}`)
+})
+
+// node index1.js
+// Example app listening on port 3000
+
+// http://localhost:3000/
